@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i, a= 0, b= 1,n;
+    cout << "Enter a binary number: ";
+    cin >> i;
+    while (i> 0)
+    {
+        n = i % 10;
+        a = a+n * b;
+        b= b* 2;
+        i = i / 10;
+    }
+    cout << "Decimal number = " << a;
+    return 0;
+}
