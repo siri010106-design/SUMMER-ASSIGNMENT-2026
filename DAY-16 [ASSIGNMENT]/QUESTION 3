@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n[5], a, b, target, flag = 0;
+    cout << "Enter 5 numbers: ";
+    for (a = 0; a < 5; a++) {
+        cin >> n[a];
+    }
+    cout << "Enter sum: ";
+    cin >> target;
+    for (a = 0; a < 4; a++) {
+        for (b = a + 1; b < 5; b++) {
+            int total = n[a] + n[b];
+            if (total == target) {
+                cout << n[a] << " + " << n[b] << " = " << target << endl;
+                flag = 1;
+            }
+        }
+    }
+    if (flag == 0) {
+        cout << "No pair found";
+    }
+    return 0;
+}
