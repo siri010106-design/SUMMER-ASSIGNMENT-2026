@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr1[4] = {1, 3, 5, 7};
+    int arr2[4] = {2, 4, 6, 8};
+    int merge[8];
+    int i;
+    for(i = 0; i < 4; i++)
+    {
+        merge[i] = arr1[i];
+    }
+    for(i = 0; i < 4; i++)
+    {
+        merge[i + 4] = arr2[i];
+    }
+    cout << "Merged Array = ";
+    for(i = 0; i < 8; i++)
+    {
+        cout << merge[i] << " ";
+    }
+    return 0;
+}
