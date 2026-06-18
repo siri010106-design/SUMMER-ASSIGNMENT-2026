@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int n(int a, int b)
+{
+    return a + b;
+}
+int main()
+{
+    int p, q;
+    cout << "Enter two numbers: ";
+    cin >> p >> q;
+    cout << "Sum = " << n(p, q);
+    return 0;
+}
