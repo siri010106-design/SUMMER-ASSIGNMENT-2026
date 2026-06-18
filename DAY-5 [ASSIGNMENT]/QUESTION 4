@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int p, big = 1;
+    cout << "Enter a number: ";
+    cin >> p;
+    for (int i = 2; i <= p; i++)
+    {
+        while (p % i == 0)
+        {
+            big = i;
+            p = p / i;
+        }
+    }
+    cout << "Largest prime factor = " << big;
+    return 0;
+}
