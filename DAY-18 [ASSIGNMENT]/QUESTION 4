@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num[5] = {4, 1, 7, 3, 5};
+    int x, y, z;
+    for(x = 0; x < 4; x++)
+    {
+        for(y = x + 1; y < 5; y++)
+        {
+            if(num[x] < num[y])
+            {
+                z = num[x];
+                num[x] = num[y];
+                num[y] = z;
+            }
+        }
+    }
+
+    cout << "Descending Order: ";
+    for(x = 0; x < 5; x++)
+    {
+        cout << num[x] << " ";
+    }
+    return 0;
+}
