@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[5], k, ans = 0;
+    float result;
+    cout << "Enter 5 values: ";
+    for(k = 0; k < 5; k++)
+    {
+        cin >> a[k];
+        ans = ans +a[k];
+    }
+    result = ans / 5.0;
+    cout << "Sum = " << ans << endl;
+    cout << "Average = " << result;
+    return 0;
+}
