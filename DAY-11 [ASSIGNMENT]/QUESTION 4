@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int factorial(int a)
+{
+    int f = 1;
+    for (int k = 1; k <= a; k++)
+    {
+        f = f * k;
+    }
+    return f;
+}
+int main()
+{
+    int b;
+    cout << "Enter a number: ";
+    cin >> b;
+    cout << "Factorial = " << factorial(b);
+    return 0;
+}
