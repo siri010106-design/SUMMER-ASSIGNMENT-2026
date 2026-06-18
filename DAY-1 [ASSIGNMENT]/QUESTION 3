@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int p, fact = 1;
+    cout << "Enter a number: ";
+    cin >> p;
+    for(int i = 1; i <= p; i++)
+    {
+        fact = fact * i;
+    }
+    cout << "Factorial is " << fact;
+    return 0;
+}
