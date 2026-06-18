@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int value[10], a, big, small;
+    cout << "Enter 10 elements: ";
+    for(a = 0; a < 10; a++)
+    {
+        cin >> value[a];
+    }
+    big = value[0];
+    small = value[0];
+    for(a = 1; a < 10; a++)
+    {
+        if(value[a] > big)
+            big = value[a];
+        if(value[a] < small)
+            small = value[a];
+    }
+    cout << "Largest element = " << big << endl;
+    cout << "Smallest element = " << small;
+    return 0;
+}
