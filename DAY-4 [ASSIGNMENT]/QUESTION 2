@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num, first = 0, second = 1, next;
+    cout << "Enter term number: ";
+    cin >> num;
+    if (num == 1)
+    {
+        cout << first;
+    }
+    else if (num == 2)
+    {
+        cout << second;
+    }
+    else
+    {
+        for (int i = 3; i <= num; i++)
+        {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        cout << next;
+    }
+    return 0;
+}
