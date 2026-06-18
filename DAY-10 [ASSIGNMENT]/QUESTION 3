@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout << "Enter the number of rows: ";
+    cin >> a;
+    for (int i = 1; i <= a;i++)
+    {
+        for (int p= 1; p<= a-i; p++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j;
+        }
+        for (int k = i - 1; k >= 1; k--)
+        {
+            cout << k;
+        }
+        cout << endl;
+    }
+    return 0;
+}
