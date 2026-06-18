@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter last number: ";
+    cin >> b;
+    for (int i = a; i <= b; i++)
+    {
+        int n = i;
+        int s = 0;
+        int r;
+        while (n > 0)
+        {
+            r = n % 10;
+            s = s + r * r * r;
+            n = n / 10;
+        }
+        if (s == i)
+        {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
