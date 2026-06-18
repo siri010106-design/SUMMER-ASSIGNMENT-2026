@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int p, rev = 0, t;
+    cin >> p;
+    t = p;
+    while(p != 0)
+    {
+        rev = rev * 10 + p% 10;
+        p = p / 10;
+    }
+    if(t == rev)
+        cout << "Palindrome";
+    else
+        cout << "Not Palindrome";
+    return 0;
+}
