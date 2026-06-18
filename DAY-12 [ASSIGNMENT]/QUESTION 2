@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int armstrong(int a)
+{
+    int t = a;
+    int sum = 0;
+    while (t != 0)
+    {
+        int rem = t % 10;
+        sum = sum + (rem * rem * rem);
+        t = t / 10;
+    }
+    if (sum ==a)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+    if (armstrong(num))
+        cout << "Armstrong Number";
+    else
+        cout << "Not Armstrong Number";
+    return 0;
+}
