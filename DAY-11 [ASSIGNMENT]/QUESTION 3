@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int n(int x)
+{
+    if (x < 2)
+        return 0;
+    for (int d = 2; d <= x / 2; d++)
+    {
+        if (x % d == 0)
+            return 0;
+    }
+    return 1;
+}
+int main()
+{
+    int p;
+    cout << "Enter a number: ";
+    cin >> p;
+    if (n(p) == 1)
+        cout << "Number is Prime";
+    else
+        cout << "Number is Not Prime";
+    return 0;
+}
