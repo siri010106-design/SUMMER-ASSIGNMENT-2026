@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int key = 30;
+    int start = 0, end = 4, mid;
+    while(start <= end)
+    {
+        mid = (start + end) / 2;
+        if(a[mid] == key)
+        {
+            cout << "Element found at position " << mid + 1;
+            break;
+        }
+        else if(key > a[mid])
+        {
+            start = mid + 1;
+        }
+        else
+        {
+            end = mid - 1;
+        }
+    }
+    if(start > end)
+    {
+        cout << "Element not found";
+    }
+    return 0;
+}
