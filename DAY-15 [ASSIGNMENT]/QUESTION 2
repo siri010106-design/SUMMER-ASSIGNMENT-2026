@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, a[10], first;
+    cout << "Enter size of array: ";
+    cin >> n;
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    first = a[0];
+    for (int i = 1; i < n; i++)
+    {
+        a[i - 1] = a[i];
+    }
+    a[n - 1] = first;
+    cout << "Array after left rotation:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
