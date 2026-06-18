@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5], i, a, b = -1;
+    cout << "Enter 5 numbers:\n";
+    for(i = 0; i < 5; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "Enter number to search: ";
+    cin >> a;
+    for(i = 0; i < 5; i++)
+    {
+        if(arr[i] == a)
+        {
+            b = i;
+            break;
+        }
+    }
+    if(b != -1)
+        cout << "Number found at index " << b;
+    else
+        cout << "Number not found";
+    return 0;
+}
