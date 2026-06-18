@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, n, i;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter last number: ";
+    cin >> b;
+    for (n = a; n <= b; n++)
+    {
+        int c = 0;
+        for (i = 1; i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                c++;
+            }
+        }
+        if (c == 2)
+        {
+            cout << n << " ";
+        }
+    }
+    return 0;
+}
