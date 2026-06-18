@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void fibo(int x)
+{
+    int first = 0;
+    int second = 1;
+    int next;
+    while (x > 0)
+    {
+        cout << first << " ";
+        next = first + second;
+        first = second;
+        second = next;
+        x--;
+    }
+}
+int main()
+{
+    int n;
+    cout << "Enter terms: ";
+    cin >> n;
+    fibo(n);
+    return 0;
+}
