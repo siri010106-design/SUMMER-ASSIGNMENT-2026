@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n[5], x, a,b = 0;
+    cout << "Enter 5 elements: ";
+    for(x = 0; x < 5; x++)
+    {
+        cin >> n[x];
+    }
+    cout << "Enter element: ";
+    cin >> a;
+    x = 0;
+    while(x < 5)
+    {
+        if(n[x] ==a)
+        {
+            b++;
+        }
+        x++;
+    }
+    cout << "Frequency is " << b;
+    return 0;
+}
