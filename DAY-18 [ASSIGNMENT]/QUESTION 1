@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num[5] = {8, 3, 6, 1, 5};
+    int a, b, c;
+    for(a = 0; a < 4; a++)
+    {
+        for(b = a + 1; b < 5; b++)
+        {
+            if(num[a] > num[b])
+            {
+                c = num[a];
+                num[a] = num[b];
+                num[b] = c;
+            }
+        }
+    }
+    cout << "Sorted Array: ";
+    for(a = 0; a < 5; a++)
+    {
+        cout << num[a] << " ";
+    }
+    return 0;
+}
