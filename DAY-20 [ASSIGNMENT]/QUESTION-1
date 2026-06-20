@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x[10][10], y[10][10], z[10][10];
+    int n;
+    cout<<"Enter size: ";
+    cin>>n;
+    cout<<"Enter first matrix:\n";
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cin>>x[i][j];
+        }
+    }
+    cout<<"Enter second matrix:\n";
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cin>>y[i][j];
+        }
+    }
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            z[i][j]=0;
+            for(int k=0; k<n; k++)
+            {
+                z[i][j]=z[i][j]+x[i][k]*y[k][j];
+            }
+        }
+    }
+    cout<<"Multiplication Matrix:\n";
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cout<<z[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
