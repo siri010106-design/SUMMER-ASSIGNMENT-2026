@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int m[10][10], n;
+    bool check = true;
+    cout << "Enter size: ";
+    cin >> n;
+    cout << "Enter matrix:\n";
+    for(int r = 0; r < n; r++)
+    {
+        for(int c = 0; c < n; c++)
+        {
+            cin >> m[r][c];
+        }
+    }
+    for(int r = 0; r < n; r++)
+    {
+        for(int c = r + 1; c < n; c++)
+        {
+            if(m[r][c] != m[c][r])
+            {
+                check = false;
+                break;
+            }
+        }
+    }
+    if(check)
+        cout << "Matrix is Symmetric";
+    else
+        cout << "Matrix is Not Symmetric";
+    return 0;
+}
