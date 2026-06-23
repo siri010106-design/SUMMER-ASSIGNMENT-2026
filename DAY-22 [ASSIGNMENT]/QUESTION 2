@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char s[100];
+    int i, count = 1;
+    cout<<"Enter sentence: ";
+    cin.getline(s, 100);
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == ' ')
+        {
+            count++;
+        }
+    }
+    cout<<"Total Words = "<<count;
+    return 0;
+}
