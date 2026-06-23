@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char name[50], find;
+    int n = 0;
+    cout<<"Enter string: ";
+    cin>>name;
+    cout<<"Enter character: ";
+    cin>>find;
+    int j = 0;
+    while(name[j] != '\0')
+    {
+        if(name[j] == find)
+        {
+            n++;
+        }
+        j++;
+    }
+    cout<<"Character occurs "<<n<<" times";
+    return 0;
+}
