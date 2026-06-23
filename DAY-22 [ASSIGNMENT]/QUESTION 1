@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char a[50];
+    int x = 0, y, check = 1;
+    cout<<"Enter string: ";
+    cin>>a;
+    while(a[x] != '\0')
+    {
+        x++;
+    }
+    for(y = 0; y < x/2; y++)
+    {
+        if(a[y] != a[x-y-1])
+        {
+            check = 0;
+            break;
+        }
+    }
+    if(check == 1)
+        cout<<"Palindrome";
+    else
+        cout<<"Not Palindrome";
+    return 0;
+}
