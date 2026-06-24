@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char s1[100], s2[100];
+    int p = 0;
+    cout<<"Enter first string: ";
+    cin>>s1;
+    cout<<"Enter second string: ";
+    cin>>s2;
+    while(s1[p] != '\0' && s2[p] != '\0')
+    {
+        p++;
+    }
+    if(s1[1]==s2[0] && s1[2]==s2[1] && s1[3]==s2[2] && s1[0]==s2[3])
+        cout<<"Rotation String";
+    else
+        cout<<"Not Rotation String";
+    return 0;
+}
