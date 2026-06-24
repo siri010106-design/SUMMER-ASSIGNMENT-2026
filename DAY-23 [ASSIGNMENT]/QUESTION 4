@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char str[100], ans;
+    int x, y, total, big = 0;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(x=0; str[x]!='\0'; x++)
+    {
+        total = 0;
+        for(y=0; str[y]!='\0'; y++)
+        {
+            if(str[x] == str[y])
+            {
+                total++;
+            }
+        }
+        if(total > big)
+        {
+            big = total;
+            ans = str[x];
+        }
+    }
+    cout<<"Maximum occurring character = "<<ans;
+    return 0;
+}
