@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char s[100];
+    int i, count = 0, max = 0;
+    cout<<"Enter sentence: ";
+    cin.getline(s,100);
+    for(i=0; s[i]!='\0'; i++)
+    {
+        if(s[i] != ' ')
+        {
+            count++;
+        }
+        else
+        {
+            if(count > max)
+            {
+                max = count;
+            }
+            count = 0;
+        }
+    }
+    if(count > max)
+    {
+        max = count;
+    }
+    cout<<"Longest word length = "<<max;
+    return 0;
+}
