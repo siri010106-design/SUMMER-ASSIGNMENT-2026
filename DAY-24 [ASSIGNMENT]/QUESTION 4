@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char a[100];
+    int p, q;
+    cout<<"Enter string: ";
+    cin>>a;
+    for(p=0; a[p]!='\0'; p++)
+    {
+        for(q=0; q<p; q++)
+        {
+            if(a[p] == a[q])
+                break;
+        }
+        if(q == p)
+            cout<<a[p];
+    }
+    return 0;
+}
