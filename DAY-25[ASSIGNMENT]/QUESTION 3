@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    int n;
+    char a[10][20], t[20];
+    cout << "Enter number of names: ";
+    cin >> n;
+    cout << "Enter names:\n";
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (strcmp(a[i], a[j]) > 0)
+            {
+                strcpy(t, a[i]);
+                strcpy(a[i], a[j]);
+                strcpy(a[j], t);
+            }
+        }
+    }
+    cout << "Sorted names:\n";
+    for (int i = 0; i < n; i++)
+        cout << a[i] << endl;
+    return 0;
+}
