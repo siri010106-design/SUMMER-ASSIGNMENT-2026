@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    int x;
+    char s[10][20], p[20];
+    cout << "Enter number of words: ";
+    cin >> x;
+    cout << "Enter words:\n";
+    for (int i = 0; i < x; i++)
+        cin >> s[i];
+    for (int i = 0; i < x - 1; i++)
+    {
+        for (int j = i + 1; j < x; j++)
+        {
+            if (strlen(s[i]) > strlen(s[j]))
+            {
+                strcpy(p, s[i]);
+                strcpy(s[i], s[j]);
+                strcpy(s[j], p);
+            }
+        }
+    }
+    cout << "Sorted words:\n";
+    for (int i = 0; i < x; i++)
+        cout << s[i] << endl;
+    return 0;
+}
