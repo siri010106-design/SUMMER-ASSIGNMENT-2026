@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string n;
+    int t;
+    cout << "Enter Your Name: ";
+    cin >> n;
+    cout << "Enter Number of Tickets: ";
+    cin >> t;
+    cout << "\nTicket Booked Successfully!" << endl;
+    cout << "Name = " << n << endl;
+    cout << "Tickets = " << t << endl;
+    return 0;
+}
