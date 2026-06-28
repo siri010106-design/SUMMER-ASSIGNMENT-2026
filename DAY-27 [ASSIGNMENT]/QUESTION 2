@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string x;
+    int y;
+    float z;
+    cout << "Enter Employee Name: ";
+    cin >> x;
+    cout << "Enter Employee ID: ";
+    cin >> y;
+    cout << "Enter Salary: ";
+    cin >> z;
+    cout << "\nEmployee Record" << endl;
+    cout << "Name = " << x << endl;
+    cout << "ID = " << y << endl;
+    cout << "Salary = " << z << endl;
+    return 0;
+}
