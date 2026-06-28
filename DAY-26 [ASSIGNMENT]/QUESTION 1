@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+    srand(time(0));
+    int num = rand() % 10 + 1;
+    int g;
+    cout << "Guess the number (1 to 10): ";
+    while (true)
+    {
+        cin >> g;
+        if (g == num)
+        {
+            cout << "You Win!";
+            break;
+        }
+        else
+        {
+            cout << "Wrong! Try Again: ";
+        }
+    }
+    return 0;
+}
