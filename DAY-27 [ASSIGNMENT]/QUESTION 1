@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a;
+    int b, c;
+    cout << "Enter Student Name: ";
+    cin >> a;
+    cout << "Enter Roll Number: ";
+    cin >> b;
+    cout << "Enter Marks: ";
+    cin >> c;
+    cout << "\nStudent Details" << endl;
+    cout << "Name = " << a << endl;
+    cout << "Roll = " << b << endl;
+    cout << "Marks = " << c << endl;
+    return 0;
+}
