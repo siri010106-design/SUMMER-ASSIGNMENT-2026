@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x, total = 0;
+    cout << "Quiz Application" << endl;
+    cout << "Q1. 2 + 2 = ?" << endl;
+    cout << "1. 3  2. 4  3. 5" << endl;
+    cin >> x;
+    if (x == 2)
+        total++;
+    cout << "Q2. National Animal of India?" << endl;
+    cout << "1. Tiger  2. Lion  3. Elephant" << endl;
+    cin >> x;
+    if (x == 1)
+        total++;
+    cout << "Score = " << total << " out of 2";
+    return 0;
+}
