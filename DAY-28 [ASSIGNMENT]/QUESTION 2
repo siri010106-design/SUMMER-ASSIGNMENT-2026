@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string n;
+    int ac;
+    float bal;
+    cout << "Enter Account Holder Name: ";
+    cin >> n;
+    cout << "Enter Account Number: ";
+    cin >> ac;
+    cout << "Enter Balance: ";
+    cin >> bal;
+    cout << "\nBank Account Details" << endl;
+    cout << "Name = " << n << endl;
+    cout << "Account No = " << ac << endl;
+    cout << "Balance = " << bal << endl;
+    return 0;
+}
