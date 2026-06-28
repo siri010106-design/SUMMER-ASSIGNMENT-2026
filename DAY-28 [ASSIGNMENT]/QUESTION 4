@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a;
+    long long b;
+    cout << "Enter Name: ";
+    cin >> a;
+    cout << "Enter Mobile Number: ";
+    cin >> b;
+    cout << "\nContact Saved" << endl;
+    cout << "Name = " << a << endl;
+    cout << "Mobile = " << b << endl;
+    return 0;
+}
