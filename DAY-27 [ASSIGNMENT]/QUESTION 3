@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a;
+    float b, c, d;
+    cout << "Enter Employee Name: ";
+    cin >> a;
+    cout << "Enter Basic Salary: ";
+    cin >> b;
+    cout << "Enter Bonus: ";
+    cin >> c;
+    d = b + c;
+    cout << "\nSalary Details" << endl;
+    cout << "Name = " << a << endl;
+    cout << "Total Salary = " << d << endl;
+    return 0;
+}
