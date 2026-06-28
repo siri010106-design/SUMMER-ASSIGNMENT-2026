@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int p, b = 3000, w;
+    cout << "Enter PIN: ";
+    cin >> p;
+    if (p == 1234)
+    {
+        cout << "Enter amount to withdraw: ";
+        cin >> w;
+        if (w <= b)
+        {
+            b = b - w;
+            cout << "Transaction Successful" << endl;
+            cout << "Balance = " << b;
+        }
+        else
+        {
+            cout << "Not Enough Balance";
+        }
+    }
+    else
+    {
+        cout << "Wrong PIN";
+    }
+    return 0;
+}
