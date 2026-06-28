@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string x, y;
+    cout << "Enter Book Name: ";
+    cin >> x;
+    cout << "Enter Student Name: ";
+    cin >> y;
+    cout << "\nBook Issued" << endl;
+    cout << "Book : " << x << endl;
+    cout << "Student : " << y << endl;
+    return 0;
+}
