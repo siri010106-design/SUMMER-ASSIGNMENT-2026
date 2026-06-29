@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int data[20], total, menu;
+    int x, item, place;
+    cout << "Enter size of array: ";
+    cin >> total;
+    cout << "Enter elements:\n";
+    for (x = 0; x < total; x++)
+    {
+        cin >> data[x];
+    }
+    while (menu != 5)
+    {
+        cout << "\n--- MENU ---";
+        cout << "\n1. Display";
+        cout << "\n2. Insert";
+        cout << "\n3. Delete";
+        cout << "\n4. Search";
+        cout << "\n5. Exit";
+        cout << "\nEnter your choice: ";
+        cin >> menu;
+        if (menu == 1)
+        {
+            cout << "Array Elements: ";
+            for (x = 0; x < total; x++)
+                cout << data[x] << " ";
+        }
+        else if (menu == 2)
+        {
+            cout << "Enter position: ";
+            cin >> place;
+            cout << "Enter new element: ";
+            cin >> item;
+            for (x = total; x >= place; x--)
+                data[x] = data[x - 1];
+            data[place - 1] = item;
+            total++;
+            cout << "Element Inserted.";
+        }
+        else if (menu == 3)
+        {
+            cout << "Enter position: ";
+            cin >> place;
+            for (x = place - 1; x < total - 1; x++)
+                data[x] = data[x + 1];
+            total--;
+            cout << "Element Deleted.";
+        }
+        else if (menu == 4)
+        {
+            cout << "Enter element to search: ";
+            cin >> item;
+            for (x = 0; x < total; x++)
+            {
+                if (data[x] == item)
+                {
+                    cout << "Element found at position " << x + 1;
+                    break;
+                }
+            }
+            if (x == total)
+                cout << "Element not found.";
+        }
+        else if (menu == 5)
+        {
+            cout << "Program Closed.";
+        }
+        else
+        {
+            cout << "Invalid Choice.";
+        }
+    }
+    return 0;
+}
