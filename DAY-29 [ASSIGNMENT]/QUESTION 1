@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int option;
+    float num1, num2, ans;
+    while (1)
+    {
+        cout << "\n====== MENU ======";
+        cout << "\n1. Add";
+        cout << "\n2. Subtract";
+        cout << "\n3. Multiply";
+        cout << "\n4. Divide";
+        cout << "\n5. Exit";
+        cout << "\nEnter choice: ";
+        cin >> option;
+        if (option == 5)
+        {
+            cout << "Calculator Closed.";
+            break;
+        }
+        cout << "Enter first number: ";
+        cin >> num1;
+        cout << "Enter second number: ";
+        cin >> num2;
+        if (option == 1)
+        {
+            ans = num1 + num2;
+            cout << "Result = " << ans;
+        }
+        else if (option == 2)
+        {
+            ans = num1 - num2;
+            cout << "Result = " << ans;
+        }
+        else if (option == 3)
+        {
+            ans = num1 * num2;
+            cout << "Result = " << ans;
+        }
+        else if (option == 4)
+        {
+            if (num2 == 0)
+                cout << "Cannot divide by zero.";
+            else
+            {
+                ans = num1 / num2;
+                cout << "Result = " << ans;
+            }
+        }
+        else
+        {
+            cout << "Wrong Choice!";
+        }
+    }
+    return 0;
+}
