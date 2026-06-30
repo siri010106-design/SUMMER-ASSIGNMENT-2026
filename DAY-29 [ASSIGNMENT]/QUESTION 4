@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int code, qty;
+    char product[50];
+    cout << "Enter Product Code: ";
+    cin >> code;
+    cout << "Enter Product Name: ";
+    cin >> product;
+    cout << "Enter Available Quantity: ";
+    cin >> qty;
+    cout << "\n----- Inventory Report -----";
+    cout << "\nProduct Code : " << code;
+    cout << "\nProduct Name : " << product;
+    cout << "\nQuantity : " << qty;
+    if (qty <= 5)
+        cout << "\nStock Status : Refill Needed";
+    else
+        cout << "\nStock Status : Sufficient";
+    return 0;
+}
