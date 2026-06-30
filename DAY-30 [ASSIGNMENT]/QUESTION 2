@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string bkName[10];
+    int bkCount[10];
+    int totalBook, opt, pos;
+    cout << "Enter total books: ";
+    cin >> totalBook;
+    while (true)
+    {
+        cout << "\n1. Add Books";
+        cout << "\n2. Display Books";
+        cout << "\n3. Find Book";
+        cout << "\n4. Exit";
+        cout << "\nEnter option: ";
+        cin >> opt;
+        if (opt == 1)
+        {
+            for (int x = 0; x < totalBook; x++)
+            {
+                cout << "\nBook " << x + 1 << endl;
+                cout << "Book Name: ";
+                cin >> bkName[x];
+                cout << "Total Copies: ";
+                cin >> bkCount[x];
+            }
+        }
+        else if (opt == 2)
+        {
+            cout << "\n--- Library Record ---\n";
+            for (int x = 0; x < totalBook; x++)
+            {
+                cout << "Book Name : " << bkName[x] << endl;
+                cout << "Copies    : " << bkCount[x] << endl;
+            }
+        }
+        else if (opt == 3)
+        {
+            cout << "Enter Book Number: ";
+            cin >> pos;
+            if (pos >= 1 && pos <= totalBook)
+            {
+                cout << "\nBook Name : " << bkName[pos - 1] << endl;
+                cout << "Copies    : " << bkCount[pos - 1] << endl;
+            }
+            else
+            {
+                cout << "Book Not Available";
+            }
+        }
+        else if (opt == 4)
+        {
+            cout << "Program Closed";
+            break;
+        }
+        else
+        {
+            cout << "Wrong Option";
+        }
+    }
+    return 0;
+}
