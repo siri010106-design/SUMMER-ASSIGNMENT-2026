@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char name1[100], name2[100];
+    int ch, count, p;
+    while (true)
+    {
+        cout << "\n--- String Operations ---";
+        cout << "\n1. Input String";
+        cout << "\n2. String Length";
+        cout << "\n3. Reverse String";
+        cout << "\n4. Copy String";
+        cout << "\n5. Exit";
+        cout << "\nEnter choice: ";
+        cin >> ch;
+        if (ch == 1)
+        {
+            cout << "Enter string: ";
+            cin >> name1;
+        }
+        else if (ch == 2)
+        {
+            count = 0;
+            while (name1[count] != '\0')
+                count++;
+            cout << "Length = " << count;
+        }
+        else if (ch == 3)
+        {
+            count = strlen(name1);
+            cout << "Reverse = ";
+            for (p = count - 1; p >= 0; p--)
+                cout << name1[p];
+        }
+        else if (ch == 4)
+        {
+            strcpy(name2, name1);
+            cout << "Copied String = " << name2;
+        }
+        else if (ch == 5)
+        {
+            cout << "Program Ended.";
+            break;
+        }
+        else
+        {
+            cout << "Invalid Choice.";
+        }
+    }
+    return 0;
+}
