@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string name[10];
+int roll[10];
+int n;
+void add()
+{
+    for(int i = 0; i < n; i++)
+    {
+        cout << "\nEnter Name: ";
+        cin >> name[i];
+        cout << "Enter Roll No: ";
+        cin >> roll[i];
+    }
+}
+void show()
+{
+    cout << "\nStudent Records\n";
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << "Name : " << name[i] << endl;
+        cout << "Roll : " << roll[i] << endl;
+    }
+}
+int main()
+{
+    int ch;
+    cout << "Enter Number of Students: ";
+    cin >> n;
+    while(ch != 3)
+    {
+        cout << "\n1. Add Record";
+        cout << "\n2. Show Record";
+        cout << "\n3. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> ch;
+        if(ch == 1)
+            add();
+        else if(ch == 2)
+            show();
+        else if(ch == 3)
+            cout << "Thank You!";
+        else
+            cout << "Invalid Choice";
+    }
+
+    return 0;
+}
