@@ -1,0 +1,66 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string worker[10];
+    int code[10];
+    int limit, op, find;
+
+    cout << "Enter number of employees: ";
+    cin >> limit;
+    while (1)
+    {
+        cout << "\n1. Add Employee";
+        cout << "\n2. Show Employee";
+        cout << "\n3. Search Employee";
+        cout << "\n4. Exit";
+        cout << "\nEnter option: ";
+        cin >> op;
+        if (op == 1)
+        {
+            for (int j = 0; j < limit; j++)
+            {
+                cout << "\nEmployee " << j + 1 << endl;
+                cout << "Name: ";
+                cin >> worker[j];
+                cout << "Code: ";
+                cin >> code[j];
+            }
+        }
+        else if (op == 2)
+        {
+            cout << "\nEmployee List\n";
+
+            for (int j = 0; j < limit; j++)
+            {
+                cout << "Name : " << worker[j] << endl;
+                cout << "Code : " << code[j] << endl;
+            }
+        }
+        else if (op == 3)
+        {
+            cout << "Enter Employee Code: ";
+            cin >> find;
+
+            for (int j = 0; j < limit; j++)
+            {
+                if (code[j] == find)
+                {
+                    cout << "\nRecord Found\n";
+                    cout << "Name : " << worker[j] << endl;
+                    cout << "Code : " << code[j] << endl;
+                }
+            }
+        }
+        else if (op == 4)
+        {
+            break;
+        }
+        else
+        {
+            cout << "Invalid Option";
+        }
+    }
+    return 0;
+}
